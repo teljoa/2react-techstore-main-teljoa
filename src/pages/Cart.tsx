@@ -1,9 +1,10 @@
-// import { useCart } from "../context/CartContext";
-// import { createOrder } from "../services/productService";
+import { useCart } from "../context/CartContext";
+import { createOrder } from "../services/productService";
+import type {Product} from "../types"
 
 export default function Cart() {
   // TODO: Consumir el contexto
-  const cart: any[] = []; 
+  const cart: Product[] = []; 
   const total = 0;
   
   const handleCheckout = async () => {

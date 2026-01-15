@@ -1,8 +1,8 @@
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Navbar from "./components/Navbar";
-// import Home from "./pages/Home";
-// import Cart from "./pages/Cart";
-// import { CartProvider } from "./context/CartContext";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from "./components/Navbar";
+import Home from './pages/Home';
+import Cart from "./pages/Cart";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
@@ -10,9 +10,23 @@ function App() {
     // 1. Envolver con CartProvider
     // 2. Configurar BrowserRouter y Routes
     // 3. Añadir Navbar
+    /*
     <div>
       <h1>Configura las Rutas en App.tsx</h1>
     </div>
+    */
+    <>
+      <BrowserRouter>
+        <CartProvider>
+          <Routes>
+            <Route path="/" element={Home}/>
+            <Route path="Cart" element={Cart}/>
+          </Routes>
+        </CartProvider>
+        <Navbar></Navbar>
+      </BrowserRouter>
+    </>
+
   );
 }
 

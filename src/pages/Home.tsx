@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
 import { getProducts } from "../services/productService";
-import { Product } from "../types";
-// import { useCart } from "../context/CartContext";
+import type { Product } from "../types";
+import { useCart } from "../context/CartContext";
 
 export default function Home() {
   const [products, setProducts] = useState<Product[]>([]);
-  // const { addToCart } = useCart();
+  const { addToCart } = useCart();
 
   useEffect(() => {
     // TODO: Cargar productos al montar el componente

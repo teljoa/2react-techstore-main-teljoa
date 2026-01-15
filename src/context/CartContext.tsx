@@ -1,5 +1,5 @@
-import { createContext, useContext, useState, ReactNode } from "react";
-import { Product, CartItem } from "../types";
+import { createContext, useContext, useState, type ReactNode } from "react";
+import type { Product, CartItem } from "../types";
 
 interface CartContextType {
   // TODO: Define el tipo del contexto
